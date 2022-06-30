@@ -1,17 +1,18 @@
 <html>
     <head>
         <title></title>
+        <script src="provera.js"></script>
     </head>
     <body>
         <?php include_once './dbconnect.php'; ?>
-        <form name="Prijava" method="post" action="">
-            Korisničko ime: <input type="text" name="kor_ime">
+        <form name="prijava" method="post" action="">
+            Korisničko ime: <input type="text" name="korime">
             Lozinka: <input type="text" name="lozinka">
-            <input type="submit" value="Prijava">
+            <input type="submit" value="Prijava" onclick="proveraPrijava()">
         </form>
         <?php
-            if (!empty($_POST['kor_ime'])) {
-                echo $_POST['kor_ime'];
+            if (!empty($_POST['korime'])) {
+                echo $_POST['korime'];
             }
             else {
                 echo 'Niste uneli korisničko ime.';
@@ -20,7 +21,7 @@
         <hr/>
         <h1>Registracija preduzeća</h1>
         <br/>
-        <form name="Registracija" method="post" action="">
+        <form name="registracija" method="post" action="">
             Ime odgovornog lica: <input type="text" name="ime"> <br/>
             Prezime odgovornog lica: <input type="text" name="prezime"> <br/>
             Korisničko ime: <input type="text" name="kor_ime"><br/>
@@ -36,7 +37,7 @@
             &emsp;&emsp;&emsp;Ulica i broj: <input type="text" name="ulica"><br/>
             PIB: <input type="text" name="pib"><br/>
             Matični broj preduzeća: <input type="text" name="mat_br"><br/>
-            <input type="submit" value="Registracija">
+            <input type="submit" value="Registracija" onclick="proveraRegistracija()">
         </form>
     </body>
 </html>
