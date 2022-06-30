@@ -23,28 +23,29 @@ function proveraRegistracija(){
     var reg_ime = /^[A-Z][a-z]+$/
     if(!ime.match(reg_ime)){
         alert("Loše ste uneli ime")
-        return
+        return false
     }
+
     if(!prezime.match(reg_ime)){
         alert("Loše ste uneli prezime")
-        return
+        return false
     }
     
     var reg_kor = /^\w+$/
     if(!kor_ime.match(reg_kor)){
         alert("Loše ste uneli korisničko ime")
-        return
+        return false
     }
 
     var reg_loz =/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,12})/ // /^([A-Z] | [a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,12})$/
     if(!lozinka.match(reg_loz)){
         alert("Loše ste uneli lozinku")
-        return
+        return false
     }
 
     if(proveraLozinke!=lozinka){
         alert("Lozinke se ne poklapaju")
-        return
+        return false
     }
 
     var reg_mejl = /^([A-Z] | [a-z])\w+@\w+\.[a-z]+/
@@ -55,39 +56,40 @@ function proveraRegistracija(){
 
     if(!preduzece.match(reg_kor)){
         alert("Loše ste uneli ime preduzeća")
-        return
+        return false
     }
 
     if(!drzava.match(reg_kor)){
         alert("Loše ste uneli državu")
-        return
+        return false
     }
 
     if(!grad.match(reg_kor)){
         alert("Loše ste uneli grad")
-        return
+        return false
     }
 
     var reg_post = /^\d+$/
     if(!post_broj.match(reg_post)){
         alert("Loše ste uneli poštanski broj")
-        return
+        return false
     }
 
     var reg_ulica = /^([A-Z] | [a-z])+\s\d+$/
     if(!ulica.match(reg_ulica)){
         alert("Loše ste uneli ulicu i broj")
-        return
+        return false
     }
 
     var reg_pib = /^[1-9]\d{8}$/
     if(!pib.match(reg_pib)){
         alert("Loše ste uneli pib")
-        return
+        return false
     }
     var reg_mat = /^\d+$/
     if(!mat_broj.match(reg_mat)){
         alert("Loše ste uneli matični broj preduzeća")
-        return
+        return false
     }
+    return true
 }
