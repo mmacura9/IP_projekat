@@ -3,6 +3,7 @@
         <title></title>
     </head>
     <body>
+        <?php include_once './dbconnect.php'; ?>
         <form name="Prijava" method="post" action="">
             Korisničko ime: <input type="text" name="kor_ime">
             Lozinka: <input type="text" name="lozinka">
