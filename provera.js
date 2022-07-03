@@ -1,11 +1,19 @@
 function proveraPrijava(){
-    var kor_ime = document.prijava.kor_ime.value
-    alert(1)
+    
+}
+
+function proveraSifre() {
+    var sifra = document.promena.nova.value
+    var reg_sifra = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,12})/;
+    if(!sifra.match(reg_sifra)) {
+        alert("Loše ste uneli lozinku")
+        return false
+    }
+    return true
 }
 
 function proveraRegistracija(){
     var ime = document.registracija.ime.value
-    //alert(ime)
     var prezime = document.registracija.prezime.value
     var kor_ime = document.registracija.kor_ime.value
     var lozinka = document.registracija.lozinka.value
@@ -19,7 +27,7 @@ function proveraRegistracija(){
     var ulica = document.registracija.ulica.value
     var pib = document.registracija.pib.value
     var mat_broj = document.registracija.mat_br.value
-
+    
     var reg_ime = /^[A-Z][a-z]+$/
     if(!ime.match(reg_ime)){
         alert("Loše ste uneli ime")
@@ -47,12 +55,12 @@ function proveraRegistracija(){
         alert("Lozinke se ne poklapaju")
         return false
     }
-
-    var reg_mejl = /^([A-Z] | [a-z])\w+@\w+\.[a-z]+/
+    
+    /*var reg_mejl = /^\w+@\w+\.\w+/
     if(!mejl.match(reg_mejl)){
         alert("Loše ste uneli e-mail")
-        return
-    }
+        return false
+    }*/
 
     if(!preduzece.match(reg_kor)){
         alert("Loše ste uneli ime preduzeća")
@@ -75,7 +83,7 @@ function proveraRegistracija(){
         return false
     }
 
-    var reg_ulica = /^([A-Z] | [a-z])+\s\d+$/
+    var reg_ulica = /^\w+/
     if(!ulica.match(reg_ulica)){
         alert("Loše ste uneli ulicu i broj")
         return false
