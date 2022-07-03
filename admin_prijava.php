@@ -20,7 +20,7 @@
                     session_start();
                     $_SESSION['kor_ime'] = $korime;
                     $_SESSION['lozinka'] = $loz;
-                    $_SESSION['tip'] = 'preduzece';
+                    $_SESSION['tip'] = 'admin';
                     header('Location: ./p_admin.php');
                 }
                 else {
