@@ -71,7 +71,7 @@
                     $res2 = mysqli_query($con, "select email from preduzece where email='$email'");
                     if(mysqli_num_rows($res2)==0){
                         $result = mysqli_query($con, "insert into preduzece (ime, prezime, kor_ime, lozinka, br_tel, email, naziv, drzava, grad, post_broj, ulica_br, PIB, maticni_br, PDV, status)"
-                        ." values ('$ime', '$prezime', '$kor_ime', '$lozinka', '$broj_tel', '$email', '$naziv', '$drzava', '$grad', '$post', '$ulica', '$pib', '$maticni', 0, 'na cekanju')");
+                        ." values ('$ime', '$prezime', '$kor_ime', '$lozinka', '$broj_tel', '$email', '$naziv', '$drzava', '$grad', '$post', '$ulica', '$pib', '$maticni', NULL, 'na cekanju')");
                         if($result) {
                             echo 'Uspesno ste registrovani';
                         }
