@@ -17,6 +17,13 @@
                 </tr>
             <?php
                 include_once './dbconnect.php';
+                session_start();
+                if(!isset($_SESSION['kor_ime'])){
+                    header('Location: ./index.php');
+                }
+                if($_SESSION['tip']!='admin'){
+                    header('Location: ./index.php');
+                }
                 $result = mysqli_query($con, "select * from preduzece where status='na cekanju'");
                 if($result){
                     while($row = mysqli_fetch_assoc($result)) {

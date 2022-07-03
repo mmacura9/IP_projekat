@@ -11,6 +11,12 @@
         <?php
             include_once './dbconnect.php';
             session_start();
+            if(!isset($_SESSION['kor_ime'])){
+                header('Location: ./index.php');
+            }
+            if($_SESSION['tip']!='preduzece'){
+                header('Location: ./index.php');
+            }
             $kor_ime = $_SESSION['kor_ime'];
             $res0 = mysqli_query($con, "select PDV from preduzece where kor_ime='$korime'");
             $row = mysqli_fetch_assoc($result);
