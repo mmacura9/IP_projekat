@@ -33,21 +33,55 @@
         <h1>Registracija preduzeća</h1>
         <br/>
         <form name="registracija" method="post" action="" onsubmit="return proveraRegistracija();">
-            Ime odgovornog lica: <input type="text" name="ime"> <br/>
-            Prezime odgovornog lica: <input type="text" name="prezime"> <br/>
-            Korisničko ime: <input type="text" name="kor_ime"><br/>
-            Lozinka: <input type="password" name="lozinka"><br/>
-            Potvrda lozinke: <input type="password" name="lozinka_potvrda"><br/>
-            Kontakt telefon: <input type="text" name="broj_tel"><br/>
-            e-mail: <input type="text" name="email"><br/>
-            Naziv preduzeća: <input type="text" name="preduzece"><br/>
-            Adresa sedišta preduzeća: <br/>
-            &emsp;&emsp;&emsp;Država: <input type="text" name="drzava"><br/>
-            &emsp;&emsp;&emsp;Grad: <input type="text" name="grad"><br/>
-            &emsp;&emsp;&emsp;Poštanski broj: <input type="text" name="post_broj"><br/>
-            &emsp;&emsp;&emsp;Ulica i broj: <input type="text" name="ulica"><br/>
-            PIB: <input type="text" name="pib"><br/>
-            Matični broj preduzeća: <input type="text" name="mat_br"><br/>
+        <table>
+            <tr>
+            <td>Ime odgovornog lica:</td><td> <input type="text" name="ime"> </td>
+            </tr>
+            <tr>
+            <td>Prezime odgovornog lica: </td><td><input type="text" name="prezime"> </td>
+            </tr>
+            <tr>
+            <td>Korisničko ime:</td> <td><input type="text" name="kor_ime"></td>
+            </tr>
+            <tr>
+            <td>Lozinka:</td> <td><input type="password" name="lozinka"><td>
+            </tr>
+            <tr>
+            <td>Potvrda lozinke:</td> <td><input type="password" name="lozinka_potvrda"><td>
+            </tr>
+            <tr>
+            <td>Kontakt telefon:</td> <td><input type="text" name="broj_tel"></td>
+            </tr>
+            <tr>
+            <td>e-mail:</td><td> <input type="text" name="email"></td>
+            </tr>
+            <tr>
+            <td>Naziv preduzeća:</td> <td><input type="text" name="preduzece"><td>
+            </tr>
+            <tr>
+            <td>
+            Adresa sedišta preduzeća:
+            </td>
+            </tr>
+            <tr>
+            <td></td><td>Država:<td> <input type="text" name="drzava"></td>
+            </tr>
+            <tr>
+            <td></td><td>Grad:</td><td><input type="text" name="grad"></td>
+            </tr>
+            <tr>
+            <td></td><td>Poštanski broj:</td> <td><input type="text" name="post_broj"></td>
+            </tr>
+            <tr>
+            <td></td><td>Ulica i broj:</td> <td><input type="text" name="ulica"></td>
+            </tr>
+            <tr>
+            <td>PIB:</td><td> <input type="text" name="pib"></td>
+            </tr>
+            <tr>
+            <td>Matični broj preduzeća:</td> <td><input type="text" name="mat_br"></td>
+            </tr>
+        </table>
             <input type="submit" name="registracija" value="Registracija">
             <br/>
             <?php

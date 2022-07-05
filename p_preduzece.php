@@ -18,11 +18,13 @@
                 header('Location: ./index.php');
             }
             $kor_ime = $_SESSION['kor_ime'];
-            $res0 = mysqli_query($con, "select PDV from preduzece where kor_ime='$korime'");
-            $row = mysqli_fetch_assoc($result);
-            if($row == null) {
+            $res0 = mysqli_query($con, "select PDV from preduzece where kor_ime='$kor_ime'");
+            $row = mysqli_fetch_assoc($res0);
+            if($row['PDV'] == NULL) {
+                mysqli_close($con);
                 header('Location: ./preduzece_prva_pr.php');
             }
+            mysqli_close($con);
         ?>
     </body>
 </html>
