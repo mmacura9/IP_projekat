@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <script src="provera.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <form name="promena" method="post" action="" onsubmit="return proveraSifre();">

@@ -1,8 +1,10 @@
 <html>
     <head>
         <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="header">
         <h2>Prijava administratora: </h2>
         <?php include_once './dbconnect.php'; ?>
         <form name="prijava" method="post" action="" onsubmit="return proveraPrijava();">
@@ -10,6 +12,7 @@
             Lozinka: <input type="password" name="lozinka">
             <input type="submit" name='prijava' value="Prijava">
         </form>
+        
         <?php
             include_once './dbconnect.php';
             if(isset($_POST['prijava'])){
@@ -29,6 +32,7 @@
             }
             mysqli_close($con);
         ?>
+        </div>
         <hr/>
     </body>
 </html>

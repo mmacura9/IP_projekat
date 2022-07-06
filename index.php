@@ -1,15 +1,22 @@
 <html>
     <head>
         <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="provera.js"></script>
     </head>
     <body>
+        <?php
+        session_start();
+        session_destroy();
+        ?>
+        <div class='header'>
         <h1>Prijava</h1>
         <form name="prijava" method="post" action="" onsubmit="return proveraPrijava();">
             Korisničko ime: <input type="text" name="korime">
             Lozinka: <input type="password" name="loz">
             <input type="submit" name="prijava" value="Prijava">
         </form>
+        </div>
         <?php
             include_once './dbconnect.php';
             if(isset($_POST['prijava'])){
@@ -29,7 +36,7 @@
             }
             
         ?>
-        <hr/>
+        
         <h1>Registracija preduzeća</h1>
         <br/>
         <form name="registracija" method="post" action="" onsubmit="return proveraRegistracija();">
@@ -64,16 +71,16 @@
             </td>
             </tr>
             <tr>
-            <td></td><td>Država:<td> <input type="text" name="drzava"></td>
+            <td class="desno">Država:<td> <input type="text" name="drzava"></td>
             </tr>
             <tr>
-            <td></td><td>Grad:</td><td><input type="text" name="grad"></td>
+            <td class="desno">Grad:</td><td><input type="text" name="grad"></td>
             </tr>
             <tr>
-            <td></td><td>Poštanski broj:</td> <td><input type="text" name="post_broj"></td>
+            <td class="desno">Poštanski broj:</td> <td><input type="text" name="post_broj"></td>
             </tr>
             <tr>
-            <td></td><td>Ulica i broj:</td> <td><input type="text" name="ulica"></td>
+            <td class="desno">Ulica i broj:</td> <td><input type="text" name="ulica"></td>
             </tr>
             <tr>
             <td>PIB:</td><td> <input type="text" name="pib"></td>
@@ -126,5 +133,6 @@
             mysqli_close($con);
             ?>
         </form>
+        <div class="footer"></div>
     </body>
 </html>

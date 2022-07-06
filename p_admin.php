@@ -2,18 +2,23 @@
     <head>
         <title></title>
         <script></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <a href='logout.php'> logout </a>
-        <br/>
-        <a href='promeni_sifru.php'> promena sifre </a>
-            <table>
+        <div class ="header">
+            <a href='logout.php'> logout </a>
+        </div>
+        <div class="meni">
+            <a href='promeni_sifru.php'> promena sifre </a>
+        </div>
+        <div class="ostalo">
+            <table class="tabela">
                 <tr>
-                    <td> Ime i prezime </td>
-                    <td> Korisničko ime </td>
-                    <td> email </td>
-                    <td> Naziv firme </td>
-                    <td> PIB </td>
+                    <th> Ime i prezime </th>
+                    <th> Korisničko ime </th>
+                    <th> email </th>
+                    <th> Naziv firme </th>
+                    <th> PIB </th>
                 </tr>
             <?php
                 include_once './dbconnect.php';
@@ -58,5 +63,7 @@
                 mysqli_close($con);
             ?>
             </table>
+            </div>
+            <div class="footer"></div>
     </body>
 </html>

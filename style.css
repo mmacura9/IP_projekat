@@ -1,0 +1,51 @@
+h1 {
+    font-family:  Garamond;
+    color: #000000;
+}
+
+.desno { /*text-align: right;*/
+    text-indent: 30px;
+}
+
+div.header {
+    background-color: #b0c4de; 
+    height: 100px;
+}
+
+div.footer { 
+    background-color: #b0c4de; 
+    height: 100px;
+    
+}
+
+a:link, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: lightblue;}
+
+th {
+    font-weight: bold;
+}
+
+.meni {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.ostalo {
+    width: 70%;
+    float: left;
+    text-align: center;
+}

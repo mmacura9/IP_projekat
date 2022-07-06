@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <script></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <a href='logout.php'> logout </a>

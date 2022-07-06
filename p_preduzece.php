@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <script></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <a href='logout.php'> logout </a>
@@ -25,6 +26,8 @@
                 header('Location: ./preduzece_prva_pr.php');
             }
             mysqli_close($con);
+
         ?>
+        <a href='info_pred.php'> Informacije o preduzeću </a>
     </body>
 </html>
