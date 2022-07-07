@@ -5,11 +5,10 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class ="header">
-            <a href='logout.php'> logout </a>
-        </div>
-        <div class="meni">
-            <a href='promeni_sifru.php'> promena sifre </a>
+        <div class="header">
+        <a href='logout.php' class="logout"> logout </a>
+        &nbsp;&nbsp;
+        <a href='promeni_sifru.php'> promena sifre </a>
         </div>
         <div class="ostalo">
             <table class="tabela">
@@ -64,6 +63,8 @@
             ?>
             </table>
             </div>
-            <div class="footer"></div>
+            <div class="footer">
+            <img src="efiskalizacija.png" width = '30%'>
+            </div>
     </body>
 </html>

@@ -33,6 +33,6 @@
             mysqli_close($con);
         ?>
         </div>
-        <hr/>
+        
     </body>
 </html>

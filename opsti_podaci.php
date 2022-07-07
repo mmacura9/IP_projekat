@@ -14,11 +14,13 @@
         <div class="dropdown">
             <button class="dropbtn">Informacije o preduzeću</button>
             <div class="dropdown-content">
-                <a href="opsti_podaci.php" target="frejm">Opšti podaci</a>
-                <a href="opsti_podaci.php" target="frejm">Žiro računi</a>
-                <a href="opsti_podaci.php" target="frejm">Kase</a>
+                <a href="opsti_podaci.php">Opšti podaci</a>
+                <a href="ziro_racuni.php">Žiro računi</a>
+                <a href="kase.php">Kase</a>
             </div>
         </div>
+        <div class="footer">
+            <img src="efiskalizacija.png" width = '30%'>
 
         </div>
     </body>

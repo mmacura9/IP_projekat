@@ -5,11 +5,20 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="header">
+            <a href='logout.php' class="logout"> logout </a>
+            &nbsp;&nbsp;
+            <a href='p_preduzece.php'> Nazad </a>
+            
+        </div>
         <form name="promena" method="post" action="" onsubmit="return proveraSifre();">
-            Stara lozinka: <input type="password" name="stara"> <br/>
-            Nova lozinka: <input type="password" name="nova"> <br/>
-            Potvrda lozinke: <input type="password" name="potvrda"><br/>
-            <input type="submit" name="promena" value="Promeni"><br/>
+        <table>
+            <tr><input type="submit" name="promena" value="Promeni"></tr>
+            <tr><td>Stara lozinka:</td> <td><input type="password" name="stara"></td> </tr>
+            <tr><td>Nova lozinka: </td> <td><input type="password" name="nova"></td> </tr>
+            <tr><td>Potvrda lozinke:</td> <td> <input type="password" name="potvrda"></td></tr>
+            
+        </table>
         </form>
         <?php
             if(isset($_POST['promena'])){
@@ -39,5 +48,10 @@
                 }
             }
         ?>
+
+        <div class="footer">
+            <img src="efiskalizacija.png" width = '30%'>
+
+        </div>
     </body>
 </html>

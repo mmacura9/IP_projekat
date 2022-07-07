@@ -5,10 +5,11 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <a href='logout.php'> logout </a>
-        <br/>
+        <div class="header">
+        <a href='logout.php' class="logout"> logout </a>
+        &nbsp;&nbsp;
         <a href='promeni_sifru.php'> promena sifre </a>
-        <hr/>
+        </div>
         
         <?php
         session_start();
@@ -55,47 +56,62 @@
             $_SESSION['counter2'] = 1;
         }
         ?>
-
+        <div id="upit">
         <form method="POST" id="forma">
+        <table>
             <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>" />
-            <input type="submit" name="dodaj" value="Dodaj šifru delatnosti" />
-            <input type="submit" name="reset" value="Resetuj na jednu šifru delatnosti" />
-            <br/>Sifre delatnosti:<br/>
+            <tr>
+            <td><input type="submit" name="dodaj" value="Dodaj šifru delatnosti" /></td>
+            <td><input type="submit" name="reset" value="Resetuj na jednu šifru delatnosti" /></td>
+            </tr>
+            <tr><td>Sifre delatnosti:</td></tr>
             <?php
             include_once './dbconnect.php';
             for($i=0; $i<$_SESSION['counter']; $i++){
                 ?>
-                &emsp;&emsp;<input type='text' name=<?php echo 'sif'.$i; ?>> <br/>
+                <tr><td></td><td><input type='text' name=<?php echo 'sif'.$i; ?>></td></tr>
                 <?php
             }?>
             <input type="hidden" name="counter1" value="<?php echo $_SESSION['counter1']; ?>" />
+            <tr>
+            <td>
             <input type="submit" name="dodaj1" value="Dodaj račun" />
+            </td>
+            <td>
             <input type="submit" name="reset1" value="Resetuj na jedan račun" />
-            <br/>Računi:<br/>
+            </td>
+            </tr>
+            <tr><td>Računi:</td></tr>
             <?php
             for($i=0; $i<$_SESSION['counter1']; $i++){
                 ?>
-                &emsp;&emsp;<input type='text' name=<?php echo 'rac'.$i; ?> placeholder='Račun'> <input type='text' name=<?php echo 'ban'.$i; ?> placeholder='Banka'><br/>
+                <tr><td></td><td><input type='text' name=<?php echo 'rac'.$i; ?> placeholder='Račun'></td><td> <input type='text' name=<?php echo 'ban'.$i; ?> placeholder='Banka'></td></tr>
                 <?php
             }?>
             <input type="hidden" name="counter2" value="<?php echo $_SESSION['counter2']; ?>" />
+            <tr>
+            <td>
             <input type="submit" name="dodaj2" value="Dodaj kasu" />
+            </td>
+            <td>
             <input type="submit" name="reset2" value="Resetuj broj kasa na jedan" />
-            <br/>Fiskalne kase:<br/>
+            </td>
+            </tr>
+            <tr><td>Fiskalne kase:</td></tr>
             <?php
             for($i=0; $i<$_SESSION['counter2']; $i++){
                 ?>
-                &emsp;&emsp;<input type='text' name=<?php echo 'lok'.$i; ?> placeholder='Lokacija'> 
-                Tip kase: <select name=<?php echo 'tipovi'.$i; ?>>
+                <tr><td></td><td><input type='text' name=<?php echo 'lok'.$i; ?> placeholder='Lokacija'> </td>
+                <td>Tip kase: <select name=<?php echo 'tipovi'.$i; ?>>
                         <option value='1' name='tip1'> Tip 1 </option>
                         <option value='2' name='tip2'> Tip 2 </option>
                         <option value='3' name='tip3'> Tip 3  </option>
                         <option value='4' name='tip4'> Tip 4 </option>
-                    </select> </br>
+                    </select> </td></tr>
                 <?php
             }?>
-            Da li ste u sistemu PDV-a? <input type='checkbox' name='pdv'><br/>
-            <input type="submit" name="submit" value="Pošalji" />
+            <tr><td>Da li ste u sistemu PDV-a?<input type='checkbox' name='pdv'></td></tr>
+            <tr><td><input type="submit" name="submit" value="Pošalji" /></td></tr>
             <?php
             if(isset($_POST['submit'])){
                 $kor_ime = $_SESSION['kor_ime'];
@@ -156,7 +172,12 @@
             }
             mysqli_close($con);
             ?>
-            
+        </table>
         </form>
+        </div>
+        <div class="footer">
+            <img src="efiskalizacija.png" width = '30%'>
+
+        </div>
     </body>
 </html>

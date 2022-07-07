@@ -40,6 +40,7 @@
         <h1>Registracija preduzeća</h1>
         <br/>
         <form name="registracija" method="post" action="" onsubmit="return proveraRegistracija();">
+        <div class='glavni'>
         <table>
             <tr>
             <td>Ime odgovornog lica:</td><td> <input type="text" name="ime"> </td>
@@ -51,10 +52,10 @@
             <td>Korisničko ime:</td> <td><input type="text" name="kor_ime"></td>
             </tr>
             <tr>
-            <td>Lozinka:</td> <td><input type="password" name="lozinka"><td>
+            <td>Lozinka:</td> <td><input type="password" name="lozinka"></td>
             </tr>
             <tr>
-            <td>Potvrda lozinke:</td> <td><input type="password" name="lozinka_potvrda"><td>
+            <td>Potvrda lozinke:</td> <td><input type="password" name="lozinka_potvrda"></td>
             </tr>
             <tr>
             <td>Kontakt telefon:</td> <td><input type="text" name="broj_tel"></td>
@@ -63,7 +64,7 @@
             <td>e-mail:</td><td> <input type="text" name="email"></td>
             </tr>
             <tr>
-            <td>Naziv preduzeća:</td> <td><input type="text" name="preduzece"><td>
+            <td>Naziv preduzeća:</td> <td><input type="text" name="preduzece"></td>
             </tr>
             <tr>
             <td>
@@ -89,6 +90,7 @@
             <td>Matični broj preduzeća:</td> <td><input type="text" name="mat_br"></td>
             </tr>
         </table>
+        </div>
             <input type="submit" name="registracija" value="Registracija">
             <br/>
             <?php
@@ -133,6 +135,9 @@
             mysqli_close($con);
             ?>
         </form>
-        <div class="footer"></div>
+        <div class="footer">
+            <img src="efiskalizacija.png" width = '30%'>
+
+        </div>
     </body>
 </html>
