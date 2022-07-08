@@ -21,6 +21,9 @@
         </table>
         </form>
         <?php
+            if(!isset($_SESSION['kor_ime'])){
+                header('Location: ./index.php');
+            }
             if(isset($_POST['promena'])){
                 $stara = $_POST['stara'];
                 $nova = $_POST['nova'];

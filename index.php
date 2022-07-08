@@ -94,7 +94,6 @@
             <input type="submit" name="registracija" value="Registracija">
             <br/>
             <?php
-            //echo gettype($con); 
             if(isset($_POST['registracija'])){
                 $ime = $_POST['ime'];
                 $prezime = $_POST['prezime'];
