@@ -11,16 +11,9 @@
             <a href='p_preduzece.php'> Nazad </a>
             
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Informacije o preduzeću</button>
-            <div class="dropdown-content">
-                <a href="opsti_podaci.php">Opšti podaci</a>
-                <a href="ziro_racuni.php">Žiro računi</a>
-                <a href="kase.php">Kase</a>
-            </div>
-        </div>
         <?php
             include_once './dbconnect.php';
+            include_once './meni.php';
             session_start();
             if(!isset($_SESSION['kor_ime'])){
                 header('Location: ./index.php');

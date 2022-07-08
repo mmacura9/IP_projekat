@@ -91,7 +91,8 @@
             </tr>
         </table>
         </div>
-            <input type="submit" name="registracija" value="Registracija">
+        <input type="submit" name="registracija" value="Registracija">
+        </form>
             <br/>
             <?php
             if(isset($_POST['registracija'])){
@@ -133,7 +134,6 @@
             }
             mysqli_close($con);
             ?>
-        </form>
         <div class="footer">
             <img src="efiskalizacija.png" width = '30%'>
 

@@ -21,6 +21,7 @@
         </table>
         </form>
         <?php
+            session_start();
             if(!isset($_SESSION['kor_ime'])){
                 header('Location: ./index.php');
             }
