@@ -23,6 +23,8 @@
             <tr>
                 <td> Unesite PIB naručioca: </td>
                 <td> <input type="text" name="pib" placeholder="PIB" /></td>
+                <td> <input type="text" name="dani" placeholder="Broj dana za plaćanje" /></td>
+                <td> <input type="text" name="rabat" placeholder="Procenat rabat" /></td>
             </tr>
             <br/>
             <input type="submit" name="dodaj" value="Dodaj" />
@@ -54,8 +56,10 @@
                         $ulica = $row['ulica_br'];
                         $pib = $row['PIB'];
                         $mat_br = $row['maticni_br'];
-                        $result = mysqli_query($con, "INSERT INTO narucioci(kor_ime, Ime, Prezime, br_tel, email, naziv, drzava, grad, post_br, ulica, pib, mat_br, kor_ime_glavni) VALUES"
-                        ." ('$kor_ime_novo','$ime','$prezime','$br_tel','$email','$naziv','$drzava','$grad','$post_br','$ulica','$pib','$mat_br','$kor_ime')");
+                        $dani = $_POST['dani'];
+                        $rabat = $_POST['rabat'];
+                        $result = mysqli_query($con, "INSERT INTO narucioci(kor_ime, kor_ime_glavni, Ime, Prezime, br_tel, email, naziv, drzava, grad, post_br, ulica, pib, mat_br, dani, rabat) VALUES"
+                        ." ('$kor_ime_novo', '$kor_ime', '$ime','$prezime','$br_tel','$email','$naziv','$drzava','$grad','$post_br','$ulica','$pib','$mat_br', '$dani', 'rabat')");
                         echo "Uspešno ste dodali naručioca";
                     }
                     else {
@@ -108,6 +112,12 @@
             <tr>
             <td>Matični broj preduzeća:</td> <td><input type="text" name="mat_br"></td>
             </tr>
+            <tr>
+            <td> Dani: </td> <td> <input type="text" name="dani" placeholder="Broj dana za plaćanje" /></td>
+            </tr>
+            <tr>
+                <td> Rabat: </td> <td> <input type="text" name="rabat" placeholder="Procenat rabat" /></td>
+            </tr>
         </table>
         <input type="submit" name="registracija" value="Registracija">
         </form>
@@ -125,9 +135,11 @@
                 $ulica = $_POST['ulica'];
                 $pib = $_POST['pib'];
                 $mat_br = $_POST['mat_br'];
+                $dani = $_POST['dani'];
+                $rabat = $_POST['rabat'];
                 if($ime!='' && $prezime!='' && $kor_ime_novo!='' && $br_tel!='' && $email!='' && $naziv!='' && $drzava!='' && $grad!='' && $post_br!='' && $ulica!='' && $pib!='' && $mat_br!=''){
-                    $result = mysqli_query($con, "INSERT INTO narucioci(kor_ime, Ime, Prezime, br_tel, email, naziv, drzava, grad, post_br, ulica, pib, mat_br, kor_ime_glavni) VALUES"
-                    ." ('$kor_ime_novo','$ime','$prezime','$br_tel','$email','$naziv','$drzava','$grad','$post_br','$ulica','$pib','$mat_br','$kor_ime')");
+                    $result = mysqli_query($con, "INSERT INTO narucioci(kor_ime, kor_ime_glavni, Ime, Prezime, br_tel, email, naziv, drzava, grad, post_br, ulica, pib, mat_br, dani, rabat) VALUES"
+                    ." ('$kor_ime_novo', '$kor_ime', '$ime','$prezime','$br_tel','$email','$naziv','$drzava','$grad','$post_br','$ulica','$pib','$mat_br', '$dani', '$rabat')");
                     echo "Uspešno ste dodali naručioca";
                 }
                 else {

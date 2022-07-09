@@ -12,7 +12,7 @@
             
         </div>
         <table>
-            <tr><th>Ime i prezime</th><th>email</th><th>Naziv firme</th><th>PIB</th></tr>
+            <tr><th>Ime i prezime</th><th>email</th><th>Naziv firme</th><th>PIB</th> <th>Broj dana za plaćanje</th> <th>Procenat rabata</th></tr>
         <?php
             include_once './dbconnect.php';
             include_once './meni.php';
@@ -33,6 +33,8 @@
                             <td> <?php echo $row['email'];?> </td>
                             <td> <?php echo $row['naziv'];?> </td>
                             <td> <?php echo $row['pib'];?> </td>
+                            <td> <?php echo $row['dani'];?> </td>
+                            <td> <?php echo $row['rabat'];?> </td>
                         </tr>
                         <?php
                     }
