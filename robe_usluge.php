@@ -31,8 +31,8 @@
             if(!isset($_GET['trenutni'])){
                 $_GET['trenutni'] = 0;
             }
-            $trenutni = $_GET['trenutni'];
-            $broj_paginacija = (int)($broj/10);
+            $trenutni = $_GET['trenutni']*10;
+            $broj_paginacija = (int)(($broj-1)/10);
             ?>
                 <table>
                     <tr><th>Sifra artikla</th><th>Naziv artikla</th><th>Jedinica mere</th><th>Stopa Poreza</th><th>Proizvođač</th></tr>
@@ -62,7 +62,7 @@
                 }
                 ?>
                 </table>
-                <a href="robe_usluge.php?trenutni=<?php if($trenutni==0) echo 0; else echo $trenutni-1;?>"> < </a> &nbsp;
+                <a href="robe_usluge.php?trenutni=<?php if($trenutni==0) echo 0; else echo $trenutni/10-1;?>"> < </a> &nbsp;
                 <?php
                     for($i=0; $i<=$broj_paginacija; $i++){
                         ?>
@@ -70,11 +70,24 @@
                         <?php
                     }
                 ?>
-                <a href="robe_usluge.php?trenutni=<?php if($trenutni==$broj_paginacija) echo $broj_paginacija; else echo $trenutni+1;?>"> > </a> &nbsp;
+                <a href="robe_usluge.php?trenutni=<?php if($trenutni/10==$broj_paginacija) echo $broj_paginacija; else echo $trenutni/10+1;?>"> > </a> &nbsp;
             <?php
             $kor_ime = $_SESSION['kor_ime'];
             ?>
             <form name="forma" method="post" action="">
+                <input type="submit" name="unesi" value="Unesi">
+            </form>
+            <?php
+            if(isset($_POST['unesi'])){
+                ?>
+                <a href="unesi_opste_podatke.php" target="frejm">Unesi opšte podatke</a> &nbsp;&nbsp;
+                <a href="dopunski_podaci.php" target="frejm">Dopunski podaci</a>&nbsp;&nbsp;
+                <a href="cene_stanje.php" target="frejm">Cene i stanje robe</a><br/>
+                <iframe src="prazan_frejm.php" name="frejm" width="50%" height="500px"></iframe> 
+                <?php
+            }
+            mysqli_close($con);
+            ?>
         <div class="footer">
             <img src="efiskalizacija.png" width = '30%'>
         </div>

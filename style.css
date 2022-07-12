@@ -86,6 +86,10 @@ body {
     text-align: center;
 }
 
+.bez_pozadine {
+    background-color: black;
+}
+
 a:hover {
     color: #ff0000;
 }
