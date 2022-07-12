@@ -18,6 +18,9 @@
     <button class="dropbtn" onclick="location.href='robe_usluge.php'">Robe i usluge</button>
 </div>
 <div class="dropdown">
+    <button class="dropbtn" onclick="location.href='raspored_artikala.php'">Raspored artikala</button>
+</div>
+<div class="dropdown">
     <button class="dropbtn" onclick="location.href='robe_usluge.php'">Izdavanje računa</button>
     <!--<div class="dropdown-content">
         <a href="pregled_narucioca.php">Pregled naručioca</a>
