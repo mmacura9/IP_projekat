@@ -83,7 +83,7 @@
                 <a href="unesi_opste_podatke.php" target="frejm">Unesi opšte podatke</a> &nbsp;&nbsp;
                 <a href="dopunski_podaci.php" target="frejm">Dopunski podaci</a>&nbsp;&nbsp;
                 <a href="cene_stanje.php" target="frejm">Cene i stanje robe</a><br/>
-                <iframe src="prazan_frejm.php" name="frejm" width="50%" height="500px"></iframe> 
+                <iframe src="prazan_frejm.php" name="frejm" width="60%" height="400px"></iframe> 
                 <?php
             }
             mysqli_close($con);

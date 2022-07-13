@@ -3,6 +3,7 @@
         <title></title>
         <script></script>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="provera.js"></script>
     </head>
     <body>
     <div class="header">
@@ -60,7 +61,7 @@
         ?>
         <br/>
         Dodaj račun: <br/>
-        <form name="dodati" method="post" action="">
+        <form name="dodati" method="post" onsubmit="return proveriRacun();">
         <tr><td><input type='text' name='br_rac' placeholder='Broj računa'> </td>
         <td><input type='text' name='banka' placeholder='Banka'> </td></tr>
         <tr><input type="submit" name="dodaj" value="Dodaj"></tr>

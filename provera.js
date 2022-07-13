@@ -2,6 +2,16 @@ function proveraPrijava(){
     
 }
 
+function proveriRacun() {
+    var br_rac = document.dodati.br_rac.value
+    var reg_rac = /^\d{3}-\d{12}-\d{2}$/
+    if(!br_rac.match(reg_rac)){
+        alert("Loše ste uneli broja računa")
+        return false
+    }
+    return true
+}
+
 function proveraSifre() {
     var sifra = document.promena.nova.value
     var reg_sifra = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,12})/;
